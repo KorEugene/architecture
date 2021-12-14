@@ -26,9 +26,9 @@ public class Main {
     private static MessageFactory createFactory(MessageType type) {
         switch (type) {
             case SMS:
-                return new SmsFactory();
+                return SmsFactory.getInstance();
             case EMAIL:
-                return new EmailFactory();
+                return EmailFactory.getInstance();
             default:
                 throw new IllegalArgumentException("Unsupported message type");
         }
